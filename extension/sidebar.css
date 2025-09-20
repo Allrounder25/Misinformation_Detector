@@ -1,0 +1,147 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  font-size: 14px;
+  color: #333;
+}
+
+#sidebar-container {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+#sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+#sidebar-header h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 18px;
+  color: #0056b3;
+}
+
+#capture-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+#capture-btn:hover {
+  background-color: #0056b3;
+}
+
+#model-selection-container {
+  margin-bottom: 10px;
+}
+
+#model-select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #f8f9fa;
+}
+
+
+#heading-container {
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+#sidebar-content {
+  flex-grow: 1;
+  position: relative;
+}
+
+#percentage-container {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #28a745; /* Green for good percentage */
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+#brief-info-container {
+  font-size: 1em;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  background-color: #f8f9fa;
+  border-left: 3px solid #007bff;
+  padding: 10px;
+}
+
+#sources-container {
+  margin-top: 20px;
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+}
+
+#sources-container h3 {
+  font-size: 1.1em;
+  color: #6c757d;
+  margin-bottom: 10px;
+}
+
+#sources-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+#sources-container li {
+  margin-bottom: 5px;
+}
+
+#sources-container a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+#sources-container a:hover {
+  text-decoration: underline;
+}
+
+#results-container {
+  color: red;
+  font-weight: bold;
+}
+
+#loading-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  border: 8px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 8px solid #3498db;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
