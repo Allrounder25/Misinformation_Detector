@@ -71,9 +71,7 @@ Text to analyze:
         print(f"[Gemini Client] Sending text analysis request to Gemini API...")
         response = model.generate_content(prompt)
         content = response.text
-        print(f"[Gemini Client] Raw response from Gemini (text):\n{content}")
         cleaned_content = _clean_json_response(content)
-        print(f"[Gemini Client] Cleaned response (text):\n{cleaned_content}")
         try:
             parsed_content = json.loads(cleaned_content)
             print(f"[Gemini Client] Successfully parsed JSON (text).")
@@ -115,9 +113,7 @@ def get_gemini_response_for_image(image_data: str, url: str, model_name: str = '
         print(f"[Gemini Client] Sending image analysis request to Gemini API...")
         response = model.generate_content([prompt_text, image_part])
         content = response.text
-        print(f"[Gemini Client] Raw response from Gemini (image):\n{content}")
         cleaned_content = _clean_json_response(content)
-        print(f"[Gemini Client] Cleaned response (image):\n{cleaned_content}")
         try:
             parsed_content = json.loads(cleaned_content)
             print(f"[Gemini Client] Successfully parsed JSON (image).")
